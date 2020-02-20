@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Acorn
+  - Leaf
+  - OakTree
+  - Branch
   layers:
   - Default
   - TransparentFX
