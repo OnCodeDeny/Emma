@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class Branch : MonoBehaviour
 {
-	PlayerDetector playerDetector;
+	ObjectDetector playerDetector;
+	public GameObject acornSpawnZone;
+	[SerializeField]
+	bool onSpawnZone;
 
 	// Start is called before the first frame update
 	void Start()
 	{
-		playerDetector = transform.Find("PlayerDetector").gameObject.GetComponent<PlayerDetector>();
+		playerDetector = transform.Find("PlayerDetector").gameObject.GetComponent<ObjectDetector>();
 	}
 
 	// Update is called once per frame
@@ -18,12 +21,12 @@ public class Branch : MonoBehaviour
         
     }
 
-	private Vector3 screenPoint;
-	private Vector3 offset;
+	Vector3 screenPoint;
+	Vector3 offset;
 
 	void OnMouseDown()
 	{
-		if (playerDetector.isPlayerInRange)
+		if (playerDetector.isObjectInRange)
 		{
 			screenPoint = Camera.main.WorldToScreenPoint(gameObject.transform.position);
 			offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z));
@@ -32,7 +35,7 @@ public class Branch : MonoBehaviour
 
 	void OnMouseDrag()
 	{
-		if (playerDetector.isPlayerInRange)
+		if (playerDetector.isObjectInRange)
 		{
 			Vector3 cursorPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z);
 			Vector3 cursorPosition = Camera.main.ScreenToWorldPoint(cursorPoint) + offset;
@@ -40,4 +43,29 @@ public class Branch : MonoBehaviour
 		}
 	}
 
+	private void OnMouseUpAsButton()
+	{
+		if (playerDetector.isObjectInRange)
+		{
+			if (onSpawnZone)
+			{
+				acornSpawnZone.GetComponent<AcornGenerator>().GenerateAcorn(transform.position, 3);
+			}
+		}
+	}
+
+	private void OnTriggerEnter2D(Collider2D collision)
+	{
+		if (collision.gameObject == acornSpawnZone)
+		{
+			onSpawnZone = true;
+		}
+	}
+	private void OnTriggerExit2D(Collider2D collision)
+	{
+		if (collision.gameObject == acornSpawnZone)
+		{
+			onSpawnZone = false;
+		}
+	}
 }
