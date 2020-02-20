@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField]
-    int acornOnHand;
+    //Represents the number of acorns currenty in the inventory.
+    public int acornOnHand;
 
     // Start is called before the first frame update
     void Start()
@@ -19,9 +19,9 @@ public class Player : MonoBehaviour
         
     }
 
-    //
-    public void GetAcorn(int num)
+    //Acorn COUNTER
+    public void GetAcorn(int number)
     {
-        acornOnHand += num;
+        acornOnHand += number;
     }
 }
