@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class Branch : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+	PlayerDetector playerDetector;
 
-    // Update is called once per frame
-    void Update()
+	// Start is called before the first frame update
+	void Start()
+	{
+		playerDetector = transform.Find("PlayerDetector").gameObject.GetComponent<PlayerDetector>();
+	}
+
+	// Update is called once per frame
+	void Update()
     {
         
     }
@@ -21,15 +23,21 @@ public class Branch : MonoBehaviour
 
 	void OnMouseDown()
 	{
-		screenPoint = Camera.main.WorldToScreenPoint(gameObject.transform.position);
-		offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z));
+		if (playerDetector.isPlayerInRange)
+		{
+			screenPoint = Camera.main.WorldToScreenPoint(gameObject.transform.position);
+			offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z));
+		}
 	}
 
 	void OnMouseDrag()
 	{
-		Vector3 cursorPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z);
-		Vector3 cursorPosition = Camera.main.ScreenToWorldPoint(cursorPoint) + offset;
-		transform.position = cursorPosition;
+		if (playerDetector.isPlayerInRange)
+		{
+			Vector3 cursorPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z);
+			Vector3 cursorPosition = Camera.main.ScreenToWorldPoint(cursorPoint) + offset;
+			transform.position = cursorPosition;
+		}
 	}
 
 }

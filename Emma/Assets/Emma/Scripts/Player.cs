@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public int acornOnHold;
+    [SerializeField]
+    int acornOnHand;
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +22,6 @@ public class Player : MonoBehaviour
     //
     public void GetAcorn(int num)
     {
-        acornOnHold += num;
+        acornOnHand += num;
     }
 }

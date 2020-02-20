@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class Leaf : MonoBehaviour
 {
+    PlayerDetector playerDetector;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        playerDetector = transform.Find("PlayerDetector").gameObject.GetComponent<PlayerDetector>();
     }
 
     // Update is called once per frame
@@ -20,6 +22,9 @@ public class Leaf : MonoBehaviour
     ///FUTURE: Click to move it///
     private void OnMouseDown()
     {
-        Destroy(gameObject);
+        if (playerDetector.isPlayerInRange)
+        {
+            Destroy(gameObject);
+        }
     }
 }
