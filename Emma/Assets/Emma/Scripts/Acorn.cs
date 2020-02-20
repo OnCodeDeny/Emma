@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class Acorn : MonoBehaviour
 {
-    public GameObject player;
     public int amount;
-    PlayerDetector playerDetector;
+    GameObject player;
+    ObjectDetector playerDetector;
 
     // Start is called before the first frame update
     void Start()
     {
-        playerDetector = transform.Find("PlayerDetector").gameObject.GetComponent<PlayerDetector>();
+        playerDetector = transform.Find("PlayerDetector").gameObject.GetComponent<ObjectDetector>();
+        player = GameObject.Find("Emma!");
     }
 
     // Update is called once per frame
@@ -22,7 +23,7 @@ public class Acorn : MonoBehaviour
 
     private void OnMouseUpAsButton()
     {
-        if (playerDetector.isPlayerInRange)
+        if (playerDetector.isObjectInRange)
         {
             player.GetComponent<Player>().GetAcorn(amount);
             Destroy(gameObject);

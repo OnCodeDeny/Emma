@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerDetector : MonoBehaviour
+public class ObjectDetector : MonoBehaviour
 {
-    public bool isPlayerInRange;
-    public GameObject player;
+    public bool isObjectInRange;
+    public string objectTag;
 
     // Start is called before the first frame update
     void Start()
@@ -21,17 +21,17 @@ public class PlayerDetector : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject == player)
+        if (collision.tag == objectTag)
         {
-            isPlayerInRange = true;
+            isObjectInRange = true;
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject == player)
+        if (collision.tag == objectTag)
         {
-            isPlayerInRange = false;
+            isObjectInRange = false;
         }
     }
 }

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 937748622955752514}
   - component: {fileID: 937748622955752524}
   - component: {fileID: 937748622955752515}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: PlayerDetector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70,5 +70,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63b70e74cc47fe04d901f324d593aca1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isPlayerInRange: 0
-  player: {fileID: 0}
+  isObjectInRange: 0
+  objectTag: Player
