@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class AcornCounter : MonoBehaviour
 {
@@ -22,6 +23,12 @@ public class AcornCounter : MonoBehaviour
     void Update()
     {
         textComponent.text = "Acorns: " + amount;
+
+        if (amount == 6)
+        {
+            LoadByIndex(2);
+            amount = 0;
+        }
     }
 
     // When an acorn is clicked, it gets added to the counter
@@ -35,4 +42,12 @@ public class AcornCounter : MonoBehaviour
             }
         }
     }
+
+    public void LoadByIndex(int sceneIndex)
+    {
+        SceneManager.LoadScene(sceneIndex);
+    }
+
+
+
 }
