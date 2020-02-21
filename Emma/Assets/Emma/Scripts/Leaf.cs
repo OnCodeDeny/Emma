@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Leaf : MonoBehaviour
 {
+    //Used to check if player is in range.(cannot interact with leaf if out of range)
     ObjectDetector playerDetector;
 
     // Start is called before the first frame update

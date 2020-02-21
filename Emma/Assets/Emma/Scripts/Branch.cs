@@ -4,8 +4,15 @@ using UnityEngine;
 
 public class Branch : MonoBehaviour
 {
+    //Used to check if player is in range.
 	ObjectDetector playerDetector;
+    //The zone where acorns are generated.
 	public GameObject acornSpawnZone;
+
+    //Acorn generate amount for each time
+    public int acornGenerateAmount = 3;
+
+    //Is the branch currently on acorn spawn zone?
 	[SerializeField]
 	bool onSpawnZone;
 
@@ -21,9 +28,9 @@ public class Branch : MonoBehaviour
         
     }
 
+    ///**********DRAG BRANCH************///
 	Vector3 screenPoint;
 	Vector3 offset;
-
 	void OnMouseDown()
 	{
 		if (playerDetector.isObjectInRange)
@@ -32,7 +39,6 @@ public class Branch : MonoBehaviour
 			offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z));
 		}
 	}
-
 	void OnMouseDrag()
 	{
 		if (playerDetector.isObjectInRange)
@@ -42,18 +48,21 @@ public class Branch : MonoBehaviour
 			transform.position = cursorPosition;
 		}
 	}
+    ///**********DRAG BRANCH************///
 
-	private void OnMouseUpAsButton()
+    //When mouse button is released, generate acorns if the branch is on the acorn spawn zone, also the player has to be close to the branch.
+    private void OnMouseUpAsButton()
 	{
 		if (playerDetector.isObjectInRange)
 		{
 			if (onSpawnZone)
 			{
-				acornSpawnZone.GetComponent<AcornGenerator>().GenerateAcorn(transform.position, 3);
+				acornSpawnZone.GetComponent<AcornGenerator>().GenerateAcorn(transform.position, acornGenerateAmount);
 			}
 		}
 	}
 
+    //Update branch status(on acorn spawn zone or not).
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
 		if (collision.gameObject == acornSpawnZone)
