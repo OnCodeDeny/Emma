@@ -11,17 +11,15 @@ public class AcornCounter : MonoBehaviour
     public Text textComponent;
     public Player player;
 
-    // Get the distance from the player to the object
-    void Start()
-    {
-    }
 
     // Counts upwards when an acorn is collected
     void Update()
-    {
+    {       
         amount = player.acornOnHand;
         textComponent.text = "Acorns: " + amount;
 
+        // check amount of acorns collected, if equal to six, Load scene 2, then reset the amount to 0
+        // so if you restart the scene, you start over with 0 acorns
         if (amount == 6)
         {
             LoadByIndex(2);
