@@ -9,37 +9,23 @@ public class AcornCounter : MonoBehaviour
     //Set Variables
     public static int amount;
     public Text textComponent;
-    ObjectDetector playerDetector;
-    GameObject player;
+    public Player player;
 
     // Get the distance from the player to the object
     void Start()
     {
-        playerDetector = transform.Find("PlayerDetector").gameObject.GetComponent<ObjectDetector>();
-        player = GameObject.Find("Emma");
     }
 
     // Counts upwards when an acorn is collected
     void Update()
     {
+        amount = player.acornOnHand;
         textComponent.text = "Acorns: " + amount;
 
         if (amount == 6)
         {
             LoadByIndex(2);
             amount = 0;
-        }
-    }
-
-    // When an acorn is clicked, it gets added to the counter
-    void OnMouseDown()
-    {
-        if (playerDetector.isObjectInRange)
-        {
-            if (gameObject.tag == "Acorn")
-            {
-                amount++;
-            }
         }
     }
 

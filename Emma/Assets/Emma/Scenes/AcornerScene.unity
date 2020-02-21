@@ -264,7 +264,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: e1e1fbb85bbabb84dbd1970d19b92c5f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6ea04f5a854d61d4cbb67fb14f5f03e6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -624,7 +624,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1900080042}
-  offset: {x: 0, y: 0, z: -10}
+  offset: {x: 0, y: 2.5, z: -10}
   delay: 0.2
   speed: 1
 --- !u!20 &519420031
@@ -762,6 +762,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textComponent: {fileID: 711713261}
+  player: {fileID: 1900080048}
 --- !u!114 &711713261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -881,6 +882,21 @@ PrefabInstance:
       propertyPath: acornSpawnZone
       value: 
       objectReference: {fileID: 1002453676}
+    - target: {fileID: 5063901744054889983, guid: 456fe56050d8a744a99941d44ded55d6,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 937748621058940916, guid: 456fe56050d8a744a99941d44ded55d6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 937748621058940921, guid: 456fe56050d8a744a99941d44ded55d6,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 547229366, guid: 456fe56050d8a744a99941d44ded55d6, type: 3}
       propertyPath: m_Offset.y
       value: 0.101382256
@@ -896,21 +912,6 @@ PrefabInstance:
     - target: {fileID: 547229366, guid: 456fe56050d8a744a99941d44ded55d6, type: 3}
       propertyPath: m_Size.x
       value: 7.002818
-      objectReference: {fileID: 0}
-    - target: {fileID: 937748621058940916, guid: 456fe56050d8a744a99941d44ded55d6,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 937748621058940921, guid: 456fe56050d8a744a99941d44ded55d6,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5063901744054889983, guid: 456fe56050d8a744a99941d44ded55d6,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 456fe56050d8a744a99941d44ded55d6, type: 3}

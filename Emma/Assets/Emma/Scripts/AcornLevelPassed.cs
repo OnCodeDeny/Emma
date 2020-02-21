@@ -21,7 +21,7 @@ public class AcornLevelPassed : MonoBehaviour
         Player playerScript = thePlayer.GetComponent<Player>();
         if (playerScript.acornOnHand >= 3)
         {
-            Debug.Log("Enough Acorns to Beat Level");
+            //Debug.Log("Enough Acorns to Beat Level");
         }
     }
 }

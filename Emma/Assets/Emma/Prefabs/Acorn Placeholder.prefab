@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 115000722785251091}
   - component: {fileID: 125002931}
   - component: {fileID: 125002930}
-  - component: {fileID: 7326728533879538166}
   m_Layer: 10
   m_Name: Acorn Placeholder
   m_TagString: Acorn
@@ -191,19 +190,6 @@ PolygonCollider2D:
       - {x: 0.19, y: -2.3}
       - {x: 0.45, y: -2.18}
       - {x: 0.64, y: -2.05}
---- !u!114 &7326728533879538166
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5840982221073726767}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f1376f937817a24ebffbfba21799b7f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textComponent: {fileID: 0}
 --- !u!1001 &972638351
 PrefabInstance:
   m_ObjectHideFlags: 0
