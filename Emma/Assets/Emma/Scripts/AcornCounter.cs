@@ -27,11 +27,9 @@ public class AcornCounter : MonoBehaviour
         }
     }
 
+    // So can load a scene if correct amount of acorns
     public void LoadByIndex(int sceneIndex)
     {
         SceneManager.LoadScene(sceneIndex);
     }
-
-
-
 }
