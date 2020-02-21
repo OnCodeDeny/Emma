@@ -536,15 +536,41 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 547229366, guid: 456fe56050d8a744a99941d44ded55d6, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.101382256
+      objectReference: {fileID: 0}
+    - target: {fileID: 547229366, guid: 456fe56050d8a744a99941d44ded55d6, type: 3}
+      propertyPath: m_Size.y
+      value: 9.06171
+      objectReference: {fileID: 0}
+    - target: {fileID: 547229366, guid: 456fe56050d8a744a99941d44ded55d6, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.06082952
+      objectReference: {fileID: 0}
+    - target: {fileID: 547229366, guid: 456fe56050d8a744a99941d44ded55d6, type: 3}
+      propertyPath: m_Size.x
+      value: 7.002818
+      objectReference: {fileID: 0}
+    - target: {fileID: 937748621058940916, guid: 456fe56050d8a744a99941d44ded55d6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 937748621058940921, guid: 456fe56050d8a744a99941d44ded55d6,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4406071291667855113, guid: 456fe56050d8a744a99941d44ded55d6,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.83
+      value: 6.32
       objectReference: {fileID: 0}
     - target: {fileID: 4406071291667855113, guid: 456fe56050d8a744a99941d44ded55d6,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.47
+      value: -1.99
       objectReference: {fileID: 0}
     - target: {fileID: 4406071291667855113, guid: 456fe56050d8a744a99941d44ded55d6,
         type: 3}
@@ -606,6 +632,11 @@ PrefabInstance:
       propertyPath: acornSpawnZone
       value: 
       objectReference: {fileID: 1002453676}
+    - target: {fileID: 5063901744054889983, guid: 456fe56050d8a744a99941d44ded55d6,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 456fe56050d8a744a99941d44ded55d6, type: 3}
 --- !u!1001 &884788997
@@ -615,6 +646,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 125002931, guid: 408064fca0737c04291d85a20839ac49, type: 3}
+      propertyPath: m_Mass
+      value: 0.16839753
+      objectReference: {fileID: 0}
     - target: {fileID: 5840982221073726765, guid: 408064fca0737c04291d85a20839ac49,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1162,6 +1197,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Oak Tree Placeholder
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300946285652592354, guid: 9610dcb6ac2515140b058e8d1d40a830,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 1.0251684
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300946285652592354, guid: 9610dcb6ac2515140b058e8d1d40a830,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 9.950782
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300946285652592354, guid: 9610dcb6ac2515140b058e8d1d40a830,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 4.747531
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300946285652592354, guid: 9610dcb6ac2515140b058e8d1d40a830,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.05863738
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9610dcb6ac2515140b058e8d1d40a830, type: 3}
