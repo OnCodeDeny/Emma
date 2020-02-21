@@ -12,7 +12,7 @@ public class Acorn : MonoBehaviour
     void Start()
     {
         playerDetector = transform.Find("PlayerDetector").gameObject.GetComponent<ObjectDetector>();
-        player = GameObject.Find("Emma!");
+        player = GameObject.Find("Emma");
     }
 
     // Update is called once per frame
