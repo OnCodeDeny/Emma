@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Emma/Scenes/Scene2YouWon.unity
     guid: 939ad119c7528a54aaeaca04b4c7ff55
+  - enabled: 1
+    path: Assets/Emma/Scenes/Leaf Minigame.unity
+    guid: 64a0acf2740f35942af1e3ab24010e9f
   m_configObjects: {}

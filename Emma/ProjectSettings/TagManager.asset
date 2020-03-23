@@ -9,6 +9,7 @@ TagManager:
   - OakTree
   - Branch
   - Ground
+  - Leaf Pile
   layers:
   - Default
   - TransparentFX
