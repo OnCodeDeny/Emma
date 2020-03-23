@@ -769,6 +769,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textComponent: {fileID: 711713261}
   player: {fileID: 1900080048}
+  rootCanvas: {fileID: 342674989}
 --- !u!114 &711713261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1417,6 +1418,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   acornOnHand: 0
+  player: {fileID: 1900080040}
 --- !u!114 &1900080049
 MonoBehaviour:
   m_ObjectHideFlags: 0

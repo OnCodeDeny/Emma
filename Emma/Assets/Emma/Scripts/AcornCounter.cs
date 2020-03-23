@@ -10,7 +10,21 @@ public class AcornCounter : MonoBehaviour
     public static int amount;
     public Text textComponent;
     public Player player;
+    public GameObject rootCanvas;
+    private static GameObject instance;
 
+    void Start()
+    {
+        DontDestroyOnLoad(rootCanvas);
+        if (instance == null)
+        {
+            instance = rootCanvas;
+        }
+        else
+        {
+            Destroy(rootCanvas);
+        }
+    }
 
     // Counts upwards when an acorn is collected
     void Update()
