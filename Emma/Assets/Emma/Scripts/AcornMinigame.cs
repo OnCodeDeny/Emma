@@ -15,12 +15,7 @@ public class AcornMinigame : MonoBehaviour
         player = GameObject.Find("Emma");
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
+    // When the acorn is clicked, it gets added to the amount andis destroyed
     private void OnMouseUpAsButton()
     {
             player.GetComponent<Player>().GetAcorn(amount);

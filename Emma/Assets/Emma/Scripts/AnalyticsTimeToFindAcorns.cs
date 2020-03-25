@@ -6,18 +6,13 @@ using UnityEngine.Analytics;
 public class AnalyticsTimeToFindAcorns : MonoBehaviour
 {
     private static int amount;
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
     {
         amount = AcornCounter.amount;
-        
+
+        // If the player collects 6 acorns, report the time taken to do so
         if (amount == 6)
         {
             ReportTimeTaken(0);
@@ -25,6 +20,7 @@ public class AnalyticsTimeToFindAcorns : MonoBehaviour
     }
 
 
+    // Report the analytics when the player completes the specified events
     public void ReportTimeTaken(float timeTaken)
     {
         Analytics.CustomEvent("time_completed", new Dictionary<string, object>

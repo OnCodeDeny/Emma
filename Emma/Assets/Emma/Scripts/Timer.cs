@@ -5,13 +5,8 @@ using UnityEngine;
 public class Timer : MonoBehaviour
 {
     public float time;
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
+    // Calculates the time counting upwards
     void Update()
     {
             time += Time.deltaTime;

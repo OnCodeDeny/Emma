@@ -14,12 +14,6 @@ public class EnterLeafMinigame : MonoBehaviour
         playerDetector = transform.Find("PlayerDetector").gameObject.GetComponent<ObjectDetector>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     //Click leaf pile to enter minigame
     private void OnMouseDown()
     {
