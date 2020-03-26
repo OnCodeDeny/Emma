@@ -15,7 +15,10 @@ public class AcornCounter : MonoBehaviour
 
     void Start()
     {
+        // Keep the Canvas in between scenes
         DontDestroyOnLoad(rootCanvas);
+
+        // Don't spawn a 2nd canvas if the first one is still there when loading a new scene
         if (instance == null)
         {
             instance = rootCanvas;

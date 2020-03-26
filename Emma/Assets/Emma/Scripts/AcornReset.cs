@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AcornReset : MonoBehaviour
 {
-    // Destroy the specified objects when the game reaches the scene with this script attached
+    // Reset the Acorn Counter to 0 once the game is beaten
     void Start()
     {
         GameObject.Find("Emma").GetComponent<Player>().acornOnHand = 0;
