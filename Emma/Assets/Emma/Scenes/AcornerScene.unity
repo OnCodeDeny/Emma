@@ -332,21 +332,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 89703232}
     m_Modifications:
-    - target: {fileID: 937748622955752513, guid: 716e0d4dd06b0be47974e14b0f26abc3,
-        type: 3}
-      propertyPath: m_Name
-      value: PlayerDetector
-      objectReference: {fileID: 0}
-    - target: {fileID: 937748622955752513, guid: 716e0d4dd06b0be47974e14b0f26abc3,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 937748622955752513, guid: 716e0d4dd06b0be47974e14b0f26abc3,
-        type: 3}
-      propertyPath: m_Layer
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 937748622955752514, guid: 716e0d4dd06b0be47974e14b0f26abc3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -401,6 +386,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 937748622955752513, guid: 716e0d4dd06b0be47974e14b0f26abc3,
+        type: 3}
+      propertyPath: m_Name
+      value: PlayerDetector
+      objectReference: {fileID: 0}
+    - target: {fileID: 937748622955752513, guid: 716e0d4dd06b0be47974e14b0f26abc3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 937748622955752513, guid: 716e0d4dd06b0be47974e14b0f26abc3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 937748622955752524, guid: 716e0d4dd06b0be47974e14b0f26abc3,
         type: 3}
@@ -1614,11 +1614,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 624898159}
     m_Modifications:
-    - target: {fileID: 937748622955752513, guid: 716e0d4dd06b0be47974e14b0f26abc3,
-        type: 3}
-      propertyPath: m_Name
-      value: PlayerDetector
-      objectReference: {fileID: 0}
     - target: {fileID: 937748622955752514, guid: 716e0d4dd06b0be47974e14b0f26abc3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1673,6 +1668,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 937748622955752513, guid: 716e0d4dd06b0be47974e14b0f26abc3,
+        type: 3}
+      propertyPath: m_Name
+      value: PlayerDetector
       objectReference: {fileID: 0}
     - target: {fileID: 937748622955752524, guid: 716e0d4dd06b0be47974e14b0f26abc3,
         type: 3}
