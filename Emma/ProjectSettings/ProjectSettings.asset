@@ -611,10 +611,10 @@ PlayerSettings:
   facebookXfbml: 0
   facebookFrictionlessRequests: 1
   apiCompatibilityLevel: 6
-  cloudProjectId: b89a644f-f23a-4dbf-8708-3a172f2841ec
+  cloudProjectId: 2488b744-03c1-4d36-9f49-7a8e22ff55b4
   framebufferDepthMemorylessMode: 0
   projectName: Emma
-  organizationId: overlordvgs
+  organizationId: sleepyshark
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
