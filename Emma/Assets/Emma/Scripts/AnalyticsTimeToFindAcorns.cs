@@ -7,6 +7,11 @@ public class AnalyticsTimeToFindAcorns : MonoBehaviour
 {
     private static int amount;
 
+    void Start()
+    {
+        //ReportTimeTaken(GameObject.Find("Time Tracker").GetComponent<Timer>().time);
+    }
+    
     // Update is called once per frame
     void Update()
     {
@@ -15,7 +20,7 @@ public class AnalyticsTimeToFindAcorns : MonoBehaviour
         // If the player collects 6 acorns, report the time taken to do so
         if (amount == 6)
         {
-            ReportTimeTaken(0);
+            ReportTimeTaken(GameObject.Find("Time Tracker").GetComponent<Timer>().time);
         }
     }
 
