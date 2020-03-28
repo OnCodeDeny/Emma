@@ -6,6 +6,11 @@ public class DialogueTrigger : MonoBehaviour
 {
     public Dialogue dialogue;
 
+    private void OnMouseDown()
+    {
+        TriggerDialogue();
+    }
+
     public void TriggerDialogue()
     {
         FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
