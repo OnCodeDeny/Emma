@@ -9,7 +9,7 @@ public class AnalyticsTimeToFindAcorns : MonoBehaviour
 
     void Start()
     {
-        ReportTimeTaken(GameObject.Find("Time Tracker").GetComponent<Timer>().time);
+        //ReportTimeTaken(GameObject.Find("Time Tracker").GetComponent<Timer>().time);
     }
     
     // Update is called once per frame
