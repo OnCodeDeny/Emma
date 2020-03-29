@@ -14,7 +14,7 @@ public class GameData {
 
     //All scenes
     public string currentSceneName;
-    public List<int> finishedQuest;
+    public List<QuestList.Quest> finishedQuest;
     public int acornOnHand;
 
     //AcornerScene
@@ -23,7 +23,7 @@ public class GameData {
 
     //LeafMinigameScene
     public float[][] leavesPositions;
-    public bool[] isAcornPickedUp;
+    public float[][] acornsPositions;
 
     public GameData(SaveManager sm)
     {
@@ -42,8 +42,12 @@ public class GameData {
         {
             leavesPositions[i][0] = sm.leavesPositions[i].x;
             leavesPositions[i][1] = sm.leavesPositions[i].y;
-        }       
-        isAcornPickedUp = sm.isAcornPickedUp;
+        }
+        for (int i = 0; i < sm.acornsPositions.Length; i++)
+        {
+            acornsPositions[i][0] = sm.acornsPositions[i].x;
+            acornsPositions[i][1] = sm.acornsPositions[i].y;
+        }
     }
 }
 
