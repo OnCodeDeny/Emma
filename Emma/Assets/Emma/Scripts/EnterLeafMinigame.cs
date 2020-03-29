@@ -7,12 +7,16 @@ public class EnterLeafMinigame : MonoBehaviour
 {
     //Used to check if player is in range.(cannot interact with leaf pile if out of range)
     ObjectDetector playerDetector;
-    public bool ClickedLeafLitterBool = false;
+   
     public GameObject acornText;
+
+    // for AnalyticsTimeToClickLeaf event
+    public bool ClickedLeafLitterBool;
 
     // Start is called before the first frame update
     void Start()
     {
+        ClickedLeafLitterBool = false;
         playerDetector = transform.Find("PlayerDetector").gameObject.GetComponent<ObjectDetector>();
         acornText = GameObject.Find("Acorn Text");
     }
