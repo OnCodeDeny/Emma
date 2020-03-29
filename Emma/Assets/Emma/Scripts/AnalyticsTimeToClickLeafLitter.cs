@@ -36,7 +36,7 @@ public class AnalyticsTimeToClickLeafLitter : MonoBehaviour
         print("ClickLeafLitterEvent tracked");
         Analytics.CustomEvent("LeafLitterEvent_Clicked", new Dictionary<string, object>
         {
-            { "leaflitterclick_id", leafLitterClickedID },
+            { "leaf_litter_click_id", leafLitterClickedID },
             { "time_elapsed", Time.timeSinceLevelLoad }
         });
     }

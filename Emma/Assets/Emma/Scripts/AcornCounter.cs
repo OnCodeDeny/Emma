@@ -14,10 +14,14 @@ public class AcornCounter : MonoBehaviour
     private static GameObject instance;
     public bool ableToEnterLeafPile;
 
+    // bool for total clicks event in "ClicksToFinishGame" script
+    public bool acornCounterLevelDoneBool;
+
     void Start()
     {
         ableToEnterLeafPile = true;
-        
+        acornCounterLevelDoneBool = false;
+
         // Keep the Canvas in between scenes
         DontDestroyOnLoad(rootCanvas);
 
@@ -42,6 +46,7 @@ public class AcornCounter : MonoBehaviour
         // so if you restart the scene, you start over with 0 acorns
         if (amount == 6)
         {
+            acornCounterLevelDoneBool = true;
             LoadByIndex(2);
             amount = 0;
         }
