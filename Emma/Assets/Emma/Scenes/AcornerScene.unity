@@ -468,7 +468,6 @@ GameObject:
   - component: {fileID: 284764840}
   - component: {fileID: 284764839}
   - component: {fileID: 284764841}
-  - component: {fileID: 284764842}
   m_Layer: 5
   m_Name: Dialogue Box
   m_TagString: Untagged
@@ -555,20 +554,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &284764842
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 284764837}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de793efddcc3e3249882e8e595ff9d4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  keepTiming: 0
-  dialogueTime: 0
 --- !u!1 &342674989
 GameObject:
   m_ObjectHideFlags: 0
@@ -581,6 +566,7 @@ GameObject:
   - component: {fileID: 342674992}
   - component: {fileID: 342674991}
   - component: {fileID: 342674990}
+  - component: {fileID: 342674994}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -669,6 +655,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &342674994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 342674989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de793efddcc3e3249882e8e595ff9d4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueManagerScript: {fileID: 374018512}
 --- !u!1 &366421471
 GameObject:
   m_ObjectHideFlags: 0
@@ -833,6 +832,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77f0f4812f673bf43b89a219ca9ff121, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  keepTiming: 0
+  dialogueTime: 0
   nameText: {fileID: 724161994}
   dialogueText: {fileID: 464161795}
   animator: {fileID: 284764841}

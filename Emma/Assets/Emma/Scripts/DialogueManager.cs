@@ -5,6 +5,10 @@ using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
+    public bool keepTiming;
+
+    public float dialogueTime;
+
     public Text nameText;
     public Text dialogueText;
 
@@ -15,7 +19,23 @@ public class DialogueManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        keepTiming = false;
+
         sentences = new Queue<string>();
+
+        DontDestroyOnLoad(this.gameObject);
+    }
+
+    void Update()
+    {
+        if (keepTiming == true)
+        {
+            dialogueTime += Time.deltaTime;
+
+            //int minutes = Mathf.FloorToInt(dialogueTime / 60); //Divide the guiTime by sixty to get the minutes.
+            //int seconds = Mathf.FloorToInt(dialogueTime % 60); //Use the euclidean division for the seconds.
+            //int fraction = Mathf.FloorToInt((dialogueTime * 100) % 100);
+        }
     }
 
     public void StartDialogue(Dialogue dialogue)
@@ -23,6 +43,8 @@ public class DialogueManager : MonoBehaviour
         Debug.Log("Starting conversation with " + dialogue.name);
 
         animator.SetBool("IsOpen", true);
+
+        keepTiming = true;
 
         sentences.Clear();
 
@@ -64,5 +86,7 @@ public class DialogueManager : MonoBehaviour
         Debug.Log("End of Conversation");
 
         animator.SetBool("IsOpen", false);
+
+        keepTiming = false;
     }
 }
