@@ -220,6 +220,7 @@ GameObject:
   - component: {fileID: 87715279}
   - component: {fileID: 87715278}
   - component: {fileID: 87715280}
+  - component: {fileID: 87715281}
   m_Layer: 0
   m_Name: Acorner Placeholder
   m_TagString: Untagged
@@ -305,9 +306,26 @@ MonoBehaviour:
   dialogue:
     name: Acorner
     sentences:
-    - Oh no no nogndkjnglksdjfnlksdfjnglksdjn
-    - heyooooo
-    - help pls
+    - Oh no, oh no, what am I going to do?
+    - My acorns! I lost my beautiful, beautiful acorns!
+    - Hey you! Can you help me? I need to find my acorns!
+    - There's 5 of them! They've got to be around here somewhere...
+--- !u!58 &87715281
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 87715277}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 8
 --- !u!4 &89703232 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 613403316295469709, guid: 2be9d9bc8cc8c3a44aa012111551de6e,
@@ -449,6 +467,8 @@ GameObject:
   - component: {fileID: 284764838}
   - component: {fileID: 284764840}
   - component: {fileID: 284764839}
+  - component: {fileID: 284764841}
+  - component: {fileID: 284764842}
   m_Layer: 5
   m_Name: Dialogue Box
   m_TagString: Untagged
@@ -475,7 +495,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 97}
+  m_AnchoredPosition: {x: 0, y: 303}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &284764839
@@ -516,6 +536,39 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 284764837}
   m_CullTransparentMesh: 0
+--- !u!95 &284764841
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 284764837}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 84f77d11deb42d64981899182683af3d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &284764842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 284764837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de793efddcc3e3249882e8e595ff9d4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keepTiming: 0
+  dialogueTime: 0
 --- !u!1 &342674989
 GameObject:
   m_ObjectHideFlags: 0
@@ -780,6 +833,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77f0f4812f673bf43b89a219ca9ff121, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nameText: {fileID: 724161994}
+  dialogueText: {fileID: 464161795}
+  animator: {fileID: 284764841}
 --- !u!4 &374018513
 Transform:
   m_ObjectHideFlags: 0
@@ -954,7 +1010,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 464462890}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 374018512}
+        m_MethodName: DisplayNextSentence
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &464462890
