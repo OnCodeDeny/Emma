@@ -719,7 +719,7 @@ MonoBehaviour:
       - m_RequirementType: 0
         m_GroupID: 
         m_Tooltip: 
-        m_Name: TimeUntilClickLeafLitter
+        m_Name: litter_clicked
         m_Value:
           m_EditingCustomValue: 0
           m_PopupIndex: 0
@@ -748,7 +748,7 @@ MonoBehaviour:
       - m_RequirementType: 0
         m_GroupID: 
         m_Tooltip: 
-        m_Name: TimeElapsed
+        m_Name: time_tolitter
         m_Value:
           m_EditingCustomValue: 0
           m_PopupIndex: 0
