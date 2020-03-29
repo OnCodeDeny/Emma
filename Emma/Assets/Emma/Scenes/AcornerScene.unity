@@ -1326,99 +1326,24 @@ MonoBehaviour:
     repetitionCount: 0
   m_EventPayload:
     m_IsEventExpanded: 1
-    m_StandardEventType: LevelComplete
+    m_StandardEventType: CustomEvent
     m_Parameters:
       m_Parameters:
-      - m_RequirementType: 1
-        m_GroupID: level
-        m_Tooltip: The level name. Either level_name or level_index is required.
-        m_Name: level_name
+      - m_RequirementType: 0
+        m_GroupID: 
+        m_Tooltip: 
+        m_Name: acorns_found_id
         m_Value:
           m_EditingCustomValue: 0
           m_PopupIndex: 0
           m_CustomValue: 
-          m_FixedType: 1
+          m_FixedType: 0
           m_EnumType: 
           m_EnumTypeIsCustomizable: 0
-          m_CanDisable: 1
-          m_PropertyType: 1
-          m_ValueType: System.String
-          m_Value: Acorner Level
-          m_Target:
-            m_Target: {fileID: 0}
-            m_Path: 
-            m_ValidTypeNames:
-            - System.String
-            m_Type: System.String
-            m_EnumType: 
-      - m_RequirementType: 1
-        m_GroupID: level
-        m_Tooltip: The order of this level within the game. Either level_name or level_index
-          is required.
-        m_Name: level_index
-        m_Value:
-          m_EditingCustomValue: 0
-          m_PopupIndex: 0
-          m_CustomValue: 
-          m_FixedType: 1
-          m_EnumType: 
-          m_EnumTypeIsCustomizable: 0
-          m_CanDisable: 1
-          m_PropertyType: 0
+          m_CanDisable: 0
+          m_PropertyType: 2
           m_ValueType: System.Int32
           m_Value: 
-          m_Target:
-            m_Target: {fileID: 0}
-            m_Path: 
-            m_ValidTypeNames:
-            - System.Int32
-            m_Type: System.Int32
-            m_EnumType: 
-      - m_RequirementType: 0
-        m_GroupID: level
-        m_Tooltip: 
-        m_Name: time_completed
-        m_Value:
-          m_EditingCustomValue: 0
-          m_PopupIndex: 0
-          m_CustomValue: 
-          m_FixedType: 0
-          m_EnumType: 
-          m_EnumTypeIsCustomizable: 0
-          m_CanDisable: 0
-          m_PropertyType: 2
-          m_ValueType: System.Single
-          m_Value: 0
-          m_Target:
-            m_Target: {fileID: 1127237423}
-            m_Path: time
-            m_ValidTypeNames:
-            - System.Int32
-            - System.Boolean
-            - System.Decimal
-            - System.Double
-            - System.Single
-            - System.Int64
-            - System.Int16
-            - System.String
-            - enum
-            m_Type: System.Single
-            m_EnumType: 
-      - m_RequirementType: 0
-        m_GroupID: level
-        m_Tooltip: 
-        m_Name: acorns_found
-        m_Value:
-          m_EditingCustomValue: 0
-          m_PopupIndex: 0
-          m_CustomValue: 
-          m_FixedType: 0
-          m_EnumType: 
-          m_EnumTypeIsCustomizable: 0
-          m_CanDisable: 0
-          m_PropertyType: 2
-          m_ValueType: System.Int32
-          m_Value: 0
           m_Target:
             m_Target: {fileID: 711713260}
             m_Path: player.acornOnHand
@@ -1435,7 +1360,7 @@ MonoBehaviour:
             m_Type: System.Int32
             m_EnumType: 
       - m_RequirementType: 0
-        m_GroupID: level
+        m_GroupID: 
         m_Tooltip: 
         m_Name: time_elapsed
         m_Value:
@@ -1464,7 +1389,7 @@ MonoBehaviour:
             - enum
             m_Type: System.Single
             m_EnumType: 
-    m_Name: level_complete
+    m_Name: time_completed
 --- !u!4 &624898159 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7156252681271030286, guid: f551bca387813cc4f81dff0eaa33e390,
@@ -2683,6 +2608,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7156252681271030284, guid: f551bca387813cc4f81dff0eaa33e390,
+        type: 3}
+      propertyPath: acornText
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f551bca387813cc4f81dff0eaa33e390, type: 3}

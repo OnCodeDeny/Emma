@@ -10,6 +10,7 @@ TagManager:
   - Branch
   - Ground
   - Leaf Pile
+  - Leaf Pile Leaf
   layers:
   - Default
   - TransparentFX
