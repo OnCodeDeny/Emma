@@ -309,7 +309,7 @@ MonoBehaviour:
     - Oh no, oh no, what am I going to do?
     - My acorns! I lost my beautiful, beautiful acorns!
     - Hey you! Can you help me? I need to find my acorns!
-    - There's 5 of them! They've got to be around here somewhere...
+    - There's 6 of them! They've got to be around here somewhere...
 --- !u!58 &87715281
 CircleCollider2D:
   m_ObjectHideFlags: 0
