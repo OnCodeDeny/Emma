@@ -26,11 +26,11 @@ public class AnalyticsTimeToFindAcorns : MonoBehaviour
 
 
     // Report the analytics when the player completes the specified events
-    public void ReportTimeTaken(float timeTaken)
+    public void ReportTimeTaken(float timeTakenID)
     {
         Analytics.CustomEvent("time_completed", new Dictionary<string, object>
         {
-            { "acorns_found", timeTaken },
+            { "acorns_found_id", timeTakenID },
             { "time_elapsed", Time.timeSinceLevelLoad }
         });
     }
