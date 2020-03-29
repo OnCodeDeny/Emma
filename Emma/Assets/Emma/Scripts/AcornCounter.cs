@@ -12,9 +12,12 @@ public class AcornCounter : MonoBehaviour
     public Player player;
     public GameObject rootCanvas;
     private static GameObject instance;
+    public bool ableToEnterLeafPile;
 
     void Start()
     {
+        ableToEnterLeafPile = true;
+        
         // Keep the Canvas in between scenes
         DontDestroyOnLoad(rootCanvas);
 

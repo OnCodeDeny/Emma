@@ -15,7 +15,7 @@ public class AcornMinigame : MonoBehaviour
         player = GameObject.Find("Emma");
     }
 
-    // When the acorn is clicked, it gets added to the amount andis destroyed
+    // When the acorn is clicked, it gets added to the amount and is destroyed
     private void OnMouseUpAsButton()
     {
             player.GetComponent<Player>().GetAcorn(amount);

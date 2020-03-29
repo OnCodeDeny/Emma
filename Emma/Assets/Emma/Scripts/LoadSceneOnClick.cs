@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class LoadSceneOnClick : MonoBehaviour
-{
+{    
     // Load the scene indicated by its Index Number in the scene
     public void LoadByIndex(int sceneIndex)
     {
