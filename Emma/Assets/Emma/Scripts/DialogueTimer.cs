@@ -1,30 +1,36 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.Analytics;
 
 public class DialogueTimer : MonoBehaviour
 {
-    public bool keepTiming;
+    public DialogueManager dialogueManagerScript;
 
-    public float dialogueTime;
+    void Start()
+    {
+        DontDestroyOnLoad(this.gameObject);
+
+        // get reference to script
+        dialogueManagerScript = GameObject.FindObjectOfType<DialogueManager>();
+    }
 
     void Update()
     {
-        if(keepTiming == true)
+        Scene scene = SceneManager.GetActiveScene();
+        if (scene.name == "Scene2YouWon")
         {
-            dialogueTime += Time.deltaTime;
+            ReportDialogueTime();
         }
     }
 
-    void OnBecameVisible()
+    void ReportDialogueTime()
     {
-        Debug.Log("Text box is visible");
-        keepTiming = true;
-    }
-
-    void OnBecameInvisible()
-    {
-        Debug.Log("Text box is invisible");
-        keepTiming = false;
+        Debug.Log("Dialogue time recorded as " + dialogueManagerScript.dialogueTime);
+        Analytics.CustomEvent("dialogueTime", new Dictionary<string, object>
+        {
+            { "dialogue open for ", dialogueManagerScript.dialogueTime },
+        });
     }
 }
