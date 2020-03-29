@@ -33,7 +33,7 @@ public class ClicksToFinishGame : MonoBehaviour
     private void Update()
     {
         // get the bool from the other script, which tells us about to load the win screen scene
-        acornCounterBoolTemp = GameObject.Find("Emma").GetComponent<AcornCounter>().acornCounterLevelDoneBool;
+        acornCounterBoolTemp = GameObject.Find("Acorn Test").GetComponent<AcornCounter>().acornCounterLevelDoneBool;
 
         // to tell which of the mouse buttons the player pressed
         if (Input.GetMouseButtonDown(0))

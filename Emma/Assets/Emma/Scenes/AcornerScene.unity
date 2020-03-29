@@ -2179,7 +2179,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   totalClicks: 0
-  acornCounterScript: {fileID: 0}
+  acornCounterScript: {fileID: 711713260}
   acornCounterBoolTemp: 0
 --- !u!4 &1787931512
 Transform:
