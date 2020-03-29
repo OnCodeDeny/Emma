@@ -3,37 +3,28 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Analytics;
 
-public class ClicksToFinishGame : MonoBehaviour
+public class ClickTracker : MonoBehaviour
 {
     //variable for total number of clicks
     public int totalClicks;
 
-    // get access to AcornLevelPassed Script
-    public AcornCounter acornCounterScript;
-    public bool acornCounterBoolTemp;
+    private static int amount;
 
     void Start()
     {
         // keep this script to the end
-        DontDestroyOnLoad(this.gameObject);
-        // get reference to script
-        acornCounterScript = GameObject.FindObjectOfType<AcornCounter>();
+        DontDestroyOnLoad(this);
     }
-
-    //void OnGUI()
-    //{
-    //    // to tell if it was a single click or a double click
-    //    Event mouseClicks = Event.current;
-    //    if (mouseClicks.isMouse)
-    //    {
-    //        //Debug.Log("Mouse clicks: " + mouseClicks.clickCount);
-    //    }
-    //}
 
     private void Update()
     {
-        // get the bool from the other script, which tells us about to load the win screen scene
-        acornCounterBoolTemp = GameObject.Find("Acorn Test").GetComponent<AcornCounter>().acornCounterLevelDoneBool;
+        amount = AcornCounter.amount;
+
+        // If the player collects 6 acorns, report the time taken to do so
+        if (amount == 6)
+        {
+            ReportTotalClicks(GameObject.Find("Click Tracker").GetComponent<ClickTracker>().totalClicks);
+        }
 
         // to tell which of the mouse buttons the player pressed
         if (Input.GetMouseButtonDown(0))
@@ -56,15 +47,7 @@ public class ClicksToFinishGame : MonoBehaviour
 
         // show how many clicks total (with right middle or left mouse button)
         Debug.Log("Total Clicks: " + totalClicks);
-
-        if (acornCounterBoolTemp == true)
-        {
-            ReportTotalClicks(0);
-        }
-
     }
-
-    //if game ends,  ReportLeafLitterClicked(0);
 
     public void ReportTotalClicks(int totalClickedID)
     {
@@ -76,8 +59,6 @@ public class ClicksToFinishGame : MonoBehaviour
             { "time_elapsed", Time.timeSinceLevelLoad }
         });
     }
-
-
 }
 
 

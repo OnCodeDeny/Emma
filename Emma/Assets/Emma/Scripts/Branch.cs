@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Branch : MonoBehaviour
 {
+	public bool treeHit = false;
+
     //Used to check if player is in range.
 	ObjectDetector playerDetector;
     //The zone where acorns are generated.
@@ -58,6 +60,7 @@ public class Branch : MonoBehaviour
 			if (onSpawnZone)
 			{
 				acornSpawnZone.GetComponent<AcornGenerator>().GenerateAcorn(transform.position, acornGenerateAmount);
+				treeHit = true;
 			}
 		}
 	}
