@@ -16,8 +16,6 @@ public class LeafPileAcornManager : MonoBehaviour
         //collectedAcorns = 0;
         acornCounter = GameObject.Find("Acorn Text");
         acorns = GameObject.FindGameObjectsWithTag("Acorn");
-        leaveButton = GameObject.Find("Back Button");
-        leaveButton.SetActive(false);
     }
 
     // Update is called once per frame
@@ -28,7 +26,6 @@ public class LeafPileAcornManager : MonoBehaviour
         if (acornsInLeafPileScene == 0)
         {
             acornCounter.GetComponent<AcornCounter>().ableToEnterLeafPile = false;
-            leaveButton.SetActive(true);
         }        
     }
 }
