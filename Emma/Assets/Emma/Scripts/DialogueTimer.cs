@@ -27,7 +27,7 @@ public class DialogueTimer : MonoBehaviour
 
     void ReportDialogueTime()
     {
-        Debug.Log("Dialogue time recorded as " + dialogueManagerScript.dialogueTime);
+        //Debug.Log("Dialogue time recorded as " + dialogueManagerScript.dialogueTime);
         Analytics.CustomEvent("dialogueTime", new Dictionary<string, object>
         {
             { "dialogue open for ", dialogueManagerScript.dialogueTime },

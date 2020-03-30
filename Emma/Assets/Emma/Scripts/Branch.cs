@@ -1,12 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Analytics;
 
 public class Branch : MonoBehaviour
 {
-	public bool treeHit = false;
+	/***Uniy Analytics***/
+	//Check if the tree is hit for the first time
+	bool treeHit = false;
+	/***Uniy Analytics***/
 
-    //Used to check if player is in range.
+	//Used to check if player is in range.
 	ObjectDetector playerDetector;
     //The zone where acorns are generated.
 	public GameObject acornSpawnZone;
@@ -23,12 +27,6 @@ public class Branch : MonoBehaviour
 	{
 		playerDetector = transform.Find("PlayerDetector").gameObject.GetComponent<ObjectDetector>();
 	}
-
-	// Update is called once per frame
-	void Update()
-    {
-        
-    }
 
     ///**********DRAG BRANCH************///
 	Vector3 screenPoint;
@@ -50,17 +48,24 @@ public class Branch : MonoBehaviour
 			transform.position = cursorPosition;
 		}
 	}
-    ///**********DRAG BRANCH************///
+	///**********DRAG BRANCH************///
 
-    //When mouse button is released, generate acorns if the branch is on the acorn spawn zone, also the player has to be close to the branch.
-    private void OnMouseUpAsButton()
+	//When mouse button is released, generate acorns if the branch is on the acorn spawn zone, also the player has to be close to the branch.
+	private void OnMouseUpAsButton()
 	{
 		if (playerDetector.isObjectInRange)
 		{
 			if (onSpawnZone)
 			{
 				acornSpawnZone.GetComponent<AcornGenerator>().GenerateAcorn(transform.position, acornGenerateAmount);
-				treeHit = true;
+
+				if (!treeHit)
+				{
+					treeHit = true;
+
+					AnalyticsResult result = AnalyticsEvent.Custom("Tree_Hit_with_Branch", new Dictionary<string, object> { { "time_elapsed", Time.timeSinceLevelLoad } });
+					Debug.Log("First tree hit event " + result);
+				}
 			}
 		}
 	}
