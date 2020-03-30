@@ -7,7 +7,7 @@ public class Acorn : MonoBehaviour
     //This varable represents the value of each acorn on screen(# of acorns get once clicked an acorn on screen).
     public int amount;
 
-    GameObject player;
+    InventoryManager im;
     ObjectDetector playerDetector;
 
     // Start is called before the first frame update
@@ -15,13 +15,8 @@ public class Acorn : MonoBehaviour
     {
         //Use player detector to detect player distance to this object
         playerDetector = transform.Find("PlayerDetector").gameObject.GetComponent<ObjectDetector>();
-        player = GameObject.Find("Emma");
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        im = GameObject.Find("InventoryManager").GetComponent<InventoryManager>();
     }
 
     private void OnMouseUpAsButton()
@@ -29,7 +24,7 @@ public class Acorn : MonoBehaviour
         //If player is in range, acorn is able to be collected.
         if (playerDetector.isObjectInRange)
         {
-            player.GetComponent<Player>().GetAcorn(amount);
+            im.acornOnHand += amount;
             Destroy(gameObject);
         }
     }

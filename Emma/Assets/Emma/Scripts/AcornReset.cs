@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class AcornReset : MonoBehaviour
 {
+    InventoryManager im;
     // Reset the Acorn Counter to 0 once the game is beaten
     void Start()
     {
-        GameObject.Find("Emma").GetComponent<Player>().acornOnHand = 0;
+        im = GameObject.Find("InventoryManager").GetComponent<InventoryManager>();
+        im.acornOnHand = 0;
     }
 }

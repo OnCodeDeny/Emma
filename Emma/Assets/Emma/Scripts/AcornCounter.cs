@@ -9,10 +9,11 @@ public class AcornCounter : MonoBehaviour
     //Set Variables
     public static int amount;
     public Text textComponent;
-    public Player player;
     public GameObject rootCanvas;
     private static GameObject instance;
     public bool ableToEnterLeafPile;
+
+    public InventoryManager im;
 
     // bool for total clicks event in "ClicksToFinishGame" script
     public bool acornCounterLevelDoneBool;
@@ -38,8 +39,8 @@ public class AcornCounter : MonoBehaviour
 
     // Counts upwards when an acorn is collected
     void Update()
-    {       
-        amount = player.acornOnHand;
+    {
+        amount = im.acornOnHand;
         textComponent.text = "Acorns: " + amount;
 
         // check amount of acorns collected, if equal to six, Load scene 2, then reset the amount to 0
