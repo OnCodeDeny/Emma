@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Branch : MonoBehaviour
 {
+	GameManager gameManager;
+
 	/***Uniy Analytics***/
 	public FirstTreeHitEventDispatcher firstTreeHitEventDispatcher;
 	/***Uniy Analytics***/
@@ -23,6 +25,12 @@ public class Branch : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
 	{
+		gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+		if (gameManager.isAcornLevelSaved)
+		{
+			transform.position = gameManager.savedBranchPosition;
+		}
+
 		firstTreeHitEventDispatcher = GameObject.Find("AnalyticsManager").GetComponent<FirstTreeHitEventDispatcher>();
 
 		playerDetector = transform.Find("PlayerDetector").gameObject.GetComponent<ObjectDetector>();

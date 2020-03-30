@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2300946285441481904}
   - component: {fileID: 2300946285441481905}
-  - component: {fileID: 2300946285441482062}
   m_Layer: 0
   m_Name: Oak Tree Placeholder
   m_TagString: OakTree
@@ -82,20 +81,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2300946285441482062
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2300946285441481906}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffcebe3cca912d54aa2c54052e450c2c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  acornPrefab: {fileID: 5840982221073726767, guid: 408064fca0737c04291d85a20839ac49,
-    type: 3}
 --- !u!1 &2300946285652592355
 GameObject:
   m_ObjectHideFlags: 0
@@ -158,3 +143,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   acornPrefab: {fileID: 5840982221073726767, guid: 408064fca0737c04291d85a20839ac49,
     type: 3}
+  acornGenerated: 0

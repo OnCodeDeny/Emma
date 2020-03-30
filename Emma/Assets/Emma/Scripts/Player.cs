@@ -4,20 +4,16 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public GameObject player;
-    Vector3 offScreen = new Vector3(1000f, 1000f, 1000f);
+    GameManager gameManager;
 
     // Start is called before the first frame update
     void Start()
     {
-        //DontDestroyOnLoad(player);
-    }
-
-    void OnCollisionEnter2D(Collision2D collider)
-    {
-        if (GameObject.FindGameObjectWithTag("Leaf Pile Leaf"))
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        if (gameManager.isAcornLevelSaved)
         {
-            transform.position += offScreen;
+            transform.position = gameManager.savedPlayerPosition;
         }
     }
+
 }

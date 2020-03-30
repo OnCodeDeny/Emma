@@ -5,9 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class EnterLeafMinigame : MonoBehaviour
 {
+    GameManager gameManager;
+
     //Used to check if player is in range.(cannot interact with leaf pile if out of range)
     ObjectDetector playerDetector;
-   
+
     public GameObject acornText;
 
     // for AnalyticsTimeToClickLeaf event
@@ -16,6 +18,8 @@ public class EnterLeafMinigame : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+
         ClickedLeafLitterBool = false;
         playerDetector = transform.Find("PlayerDetector").gameObject.GetComponent<ObjectDetector>();
         acornText = GameObject.Find("Acorn Text");
@@ -27,11 +31,19 @@ public class EnterLeafMinigame : MonoBehaviour
         if (playerDetector.isObjectInRange)
         {
             if (acornText != null)
-            if (acornText.GetComponent<AcornCounter>().ableToEnterLeafPile == true)
-            {
-                ClickedLeafLitterBool = true;
-                SceneManager.LoadScene("Leaf Minigame");
-            }
+                if (acornText.GetComponent<AcornCounter>().ableToEnterLeafPile == true)
+                {
+                    ClickedLeafLitterBool = true;
+
+                    gameManager.savedBranchPosition = GameObject.Find("Branch").transform.position;
+                    gameManager.savedPlayerPosition = GameObject.Find("Emma").transform.position;
+                    gameManager.savedNumberOfAcorns = GameObject.FindGameObjectsWithTag("Acorn").Length;
+                    gameManager.savedNumberOfAcornsGenerated = GameObject.Find("AcornSpawnZone").GetComponent<AcornGenerator>().acornGenerated;
+
+                    gameManager.isAcornLevelSaved = true;
+
+                    SceneManager.LoadScene("Leaf Minigame");
+                }
         }
     }
 }

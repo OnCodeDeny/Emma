@@ -4,20 +4,20 @@ using UnityEngine;
 
 public class AcornGenerator : MonoBehaviour
 {
+    GameManager gameManager;
+
     public GameObject acornPrefab;
 
-    int acornGenerated;
+    public int acornGenerated;
 
     // Start is called before the first frame update
     void Start()
     {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        if (gameManager.isAcornLevelSaved)
+        {
+            acornGenerated = gameManager.savedNumberOfAcornsGenerated;
+        }
     }
 
     /// <summary>
