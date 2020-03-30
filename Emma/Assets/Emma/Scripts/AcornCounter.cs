@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
@@ -20,6 +18,8 @@ public class AcornCounter : MonoBehaviour
 
     void Start()
     {
+        im = GameObject.Find("InventoryManager").GetComponent<InventoryManager>();
+
         ableToEnterLeafPile = true;
         acornCounterLevelDoneBool = false;
 
@@ -49,7 +49,6 @@ public class AcornCounter : MonoBehaviour
         {
             acornCounterLevelDoneBool = true;
             LoadByIndex(2);
-            amount = 0;
         }
     }
 

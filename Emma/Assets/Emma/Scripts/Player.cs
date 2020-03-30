@@ -10,7 +10,7 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        DontDestroyOnLoad(player);
+        //DontDestroyOnLoad(player);
     }
 
     void OnCollisionEnter2D(Collision2D collider)
