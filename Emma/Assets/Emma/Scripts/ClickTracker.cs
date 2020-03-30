@@ -46,7 +46,7 @@ public class ClickTracker : MonoBehaviour
         }
 
         // show how many clicks total (with right middle or left mouse button)
-        Debug.Log("Total Clicks: " + totalClicks);
+        //Debug.Log("Total Clicks: " + totalClicks);
     }
 
     public void ReportTotalClicks(int totalClickedID)
