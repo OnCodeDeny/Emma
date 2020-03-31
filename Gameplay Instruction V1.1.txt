@@ -1,0 +1,12 @@
+Hit start game.
+Space to jump.
+A/D for left/right movement.
+Talk with Acorner on the tree by clicking it when the player character is close to it.
+
+Click leaf pile under the tree.
+Click leaves to move them, the acorns are hiding behind them.
+Click acorns under leaves to pick up them.
+Go back to the previous scene.
+Walk to the branch, press and hold the branch, walk towards the tree while holding the branch near the player character.
+Touch the tree with branch.
+Collect acorns dropped from the tree.
