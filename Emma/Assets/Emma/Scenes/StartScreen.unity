@@ -926,9 +926,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47bcf01cad72d3e49b94ff15cf1fa391, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isAcornLevelSaved: 0
   savedBranchPosition: {x: 0, y: 0}
   savedPlayerPosition: {x: 0, y: 0}
-  savedAcorns: []
+  savedNumberOfAcorns: 0
+  savedNumberOfAcornsGenerated: 0
+  isAcornMinigameLevelSaved: 0
+  savedLeavesPositions: []
+  savedLeavesRotations: []
+  savedLeavesScales: []
+  savedLeavesColors: []
+  savedAcornsPositions: []
+  savedAcornsRotations: []
+  savedAcornsScales: []
 --- !u!4 &2001525391
 Transform:
   m_ObjectHideFlags: 0
