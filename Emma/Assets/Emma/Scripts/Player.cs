@@ -10,8 +10,11 @@ public class Player : MonoBehaviour
     void Start()
     {
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
-        if (gameManager.isAcornLevelSaved)
+
+        //Find if this scene has previously saved data
+        if (gameManager.isAcornerLevelSaved)
         {
+            //Retrieve previously saved player position
             transform.position = gameManager.savedPlayerPosition;
         }
     }

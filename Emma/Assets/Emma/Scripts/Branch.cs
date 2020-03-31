@@ -26,7 +26,7 @@ public class Branch : MonoBehaviour
 	void Start()
 	{
 		gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
-		if (gameManager.isAcornLevelSaved)
+		if (gameManager.isAcornerLevelSaved)
 		{
 			transform.position = gameManager.savedBranchPosition;
 		}

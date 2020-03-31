@@ -35,13 +35,14 @@ public class EnterLeafMinigame : MonoBehaviour
                 {
                     ClickedLeafLitterBool = true;
 
+                    //Save current scene data
                     gameManager.savedBranchPosition = GameObject.Find("Branch").transform.position;
                     gameManager.savedPlayerPosition = GameObject.Find("Emma").transform.position;
                     gameManager.savedNumberOfAcorns = GameObject.FindGameObjectsWithTag("Acorn").Length;
-                    gameManager.savedNumberOfAcornsGenerated = GameObject.Find("AcornSpawnZone").GetComponent<AcornGenerator>().acornGenerated;
 
-                    gameManager.isAcornLevelSaved = true;
+                    gameManager.isAcornerLevelSaved = true;
 
+                    //Load minigame scene after saving all data in current scene
                     SceneManager.LoadScene("Leaf Minigame");
                 }
         }

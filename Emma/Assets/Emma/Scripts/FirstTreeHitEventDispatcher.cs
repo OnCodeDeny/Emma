@@ -16,6 +16,7 @@ public class FirstTreeHitEventDispatcher : MonoBehaviour
         {
             treeHit = true;
 
+            //Parameter : time_elapsed, represents the time spent in the level before the player fisrt time hit the tree with branch
             AnalyticsResult result = AnalyticsEvent.Custom("Tree_Hit_with_Branch", new Dictionary<string, object> { { "time_elapsed", Time.timeSinceLevelLoad } });
             Debug.Log("First tree hit event " + result);
         }

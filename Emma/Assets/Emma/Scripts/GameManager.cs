@@ -9,20 +9,25 @@ public class GameManager : Singleton<GameManager>
         DontDestroyOnLoad(gameObject);
     }
 
+    //Track how many acorns have dropped from tree
+    public int acornGenerated;
 
-    public bool isAcornLevelSaved = false;
+    /// <summary>
+    /// Data need to save for Acorner level
+    /// </summary>
+    public bool isAcornerLevelSaved = false;
     public Vector2 savedBranchPosition;
     public Vector2 savedPlayerPosition;
     public int savedNumberOfAcorns;
-    public int savedNumberOfAcornsGenerated;
 
-
-    public bool isAcornMinigameLevelSaved = false;
+    /// <summary>
+    /// Data need to save for Leaf Minigame level
+    /// </summary>
+    public bool isLeafMinigameLevelSaved = false;
     public Vector2[] savedLeavesPositions;
     public Quaternion[] savedLeavesRotations;
     public Vector3[] savedLeavesScales;
     public Color[] savedLeavesColors;
-
     public Vector2[] savedAcornsPositions;
     public Quaternion[] savedAcornsRotations;
     public Vector3[] savedAcornsScales;

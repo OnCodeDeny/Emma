@@ -7,6 +7,7 @@ public class SceneRestorer : Singleton<SceneRestorer>
 {
     GameManager gameManager;
 
+    //Prefabs needed to restore scenes
     public GameObject acornPrefab;
     public GameObject acornMinigamePrefab;
     public GameObject leafMinigamePrefab;
@@ -14,23 +15,29 @@ public class SceneRestorer : Singleton<SceneRestorer>
     // Start is called before the first frame update
     void Start()
     {
-
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
 
+        //Check current scene name, restore scene according to its name
         if (SceneManager.GetActiveScene().name == "AcornerScene")
         {
-            if (gameManager.isAcornLevelSaved)
+            //Check if there was a previous section with this scene, no need to restore when first time enter the scene
+            if (gameManager.isAcornerLevelSaved)
             {
+                //Load saved data to the scene
                 for (int i = 0; i < gameManager.savedNumberOfAcorns; i++)
                 {
                     Instantiate(acornPrefab, new Vector3(1 + i * Random.Range(0.5f, 3f), -3, 0), Quaternion.identity);
                 }
             }
         }
+        //Check current scene name, restore scene according to its name
         else if (SceneManager.GetActiveScene().name == "Leaf Minigame")
         {
-            if (gameManager.isAcornMinigameLevelSaved)
+            //Check if there was a previous section with this scene, no need to restore when first time enter the scene
+            if (gameManager.isLeafMinigameLevelSaved)
             {
+                //Load saved data to the scene
+                //Destroy & rebuild
                 foreach (GameObject acorn in GameObject.FindGameObjectsWithTag("Acorn"))
                 {
                     Destroy(acorn);
