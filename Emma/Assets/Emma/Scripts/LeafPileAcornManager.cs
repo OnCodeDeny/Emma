@@ -23,9 +23,9 @@ public class LeafPileAcornManager : MonoBehaviour
     {
         acorns = GameObject.FindGameObjectsWithTag("Acorn");
         acornsInLeafPileScene = acorns.Length;
-        if (acornsInLeafPileScene == 0)
-        {
-            acornCounter.GetComponent<AcornCounter>().ableToEnterLeafPile = false;
-        }        
+        //if (acornsInLeafPileScene == 0)
+        //{
+        //    acornCounter.GetComponent<AcornCounter>().ableToEnterLeafPile = false;
+        //}        
     }
 }

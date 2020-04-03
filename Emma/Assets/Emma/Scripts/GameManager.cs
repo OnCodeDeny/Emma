@@ -32,4 +32,10 @@ public class GameManager : Singleton<GameManager>
     public Quaternion[] savedAcornsRotations;
     public Vector3[] savedAcornsScales;
 
+    public void Reset()
+    {
+        acornGenerated = 0;
+        isAcornerLevelSaved = false;
+        isLeafMinigameLevelSaved = false;
+    }
 }

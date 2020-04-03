@@ -9,7 +9,7 @@ public class AcornCounter : MonoBehaviour
     public Text textComponent;
     public GameObject rootCanvas;
     private static GameObject instance;
-    public bool ableToEnterLeafPile;
+    //public bool ableToEnterLeafPile;
 
     public InventoryManager im;
 
@@ -20,7 +20,7 @@ public class AcornCounter : MonoBehaviour
     {
         im = GameObject.Find("InventoryManager").GetComponent<InventoryManager>();
 
-        ableToEnterLeafPile = true;
+        //ableToEnterLeafPile = true;
         acornCounterLevelDoneBool = false;
 
         // Keep the Canvas in between scenes

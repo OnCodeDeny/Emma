@@ -9,10 +9,4 @@ public class AnalyticsManager : Singleton<AnalyticsManager>
     {
         DontDestroyOnLoad(gameObject);
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

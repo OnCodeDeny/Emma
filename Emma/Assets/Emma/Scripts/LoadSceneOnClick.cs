@@ -2,14 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Events;
 
 public class LoadSceneOnClick : MonoBehaviour
 {
     GameManager gameManager;
+    InventoryManager inventoryManager;
+
+    public UnityEvent gameRestart;
 
     private void Start()
     {
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        inventoryManager = GameObject.Find("InventoryManager").GetComponent<InventoryManager>();
     }
 
     // Load the scene indicated by its Index Number in the scene
@@ -48,7 +53,14 @@ public class LoadSceneOnClick : MonoBehaviour
 
             gameManager.isLeafMinigameLevelSaved = true;
         }
-        //Load scene after saving all data
+
+        else if (SceneManager.GetActiveScene().name == "Scene2YouWon" && sceneIndex == 1)
+        {
+            //Restart game, reset variables.
+            gameManager.Reset();
+            inventoryManager.Reset();
+        }
+
         SceneManager.LoadScene(sceneIndex);
     }
 }

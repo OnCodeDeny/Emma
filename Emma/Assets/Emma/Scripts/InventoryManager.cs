@@ -11,13 +11,13 @@ public class InventoryManager : Singleton<InventoryManager>
     bool lastAcornFound = false;
     /***Uniy Analytics***/
 
+    //Represents the number of acorns currenty in the inventory.
+    public int acornOnHand;
+
     private void Start()
     {
         DontDestroyOnLoad(gameObject);
     }
-
-    //Represents the number of acorns currenty in the inventory.
-    public int acornOnHand;
 
     private void Update()
     {
@@ -38,5 +38,10 @@ public class InventoryManager : Singleton<InventoryManager>
             AnalyticsResult result = AnalyticsEvent.Custom("last_acorn_found", new Dictionary<string, object> { { "time_elapsed", Time.timeSinceLevelLoad } });
             Debug.Log("Last acorn found event " + result);
         }
+    }
+
+    public void Reset()
+    {
+        acornOnHand = 0;
     }
 }

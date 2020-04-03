@@ -31,7 +31,7 @@ public class EnterLeafMinigame : MonoBehaviour
         if (playerDetector.isObjectInRange)
         {
             if (acornText != null)
-                if (acornText.GetComponent<AcornCounter>().ableToEnterLeafPile == true)
+                //if (acornText.GetComponent<AcornCounter>().ableToEnterLeafPile == true)
                 {
                     ClickedLeafLitterBool = true;
 
