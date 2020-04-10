@@ -307,8 +307,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 96468375}
-  - component: {fileID: 96468374}
   - component: {fileID: 96468376}
+  - component: {fileID: 96468374}
   m_Layer: 0
   m_Name: AnalyticsManager
   m_TagString: Untagged

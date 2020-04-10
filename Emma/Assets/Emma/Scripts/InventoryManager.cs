@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Analytics;
+using UnityEngine.SceneManagement;
 
 public class InventoryManager : Singleton<InventoryManager>
 {
@@ -44,4 +45,15 @@ public class InventoryManager : Singleton<InventoryManager>
     {
         acornOnHand = 0;
     }
+
+    public void AddAcorn(int amount)
+    {
+        acornOnHand += amount;
+        // check amount of acorns collected, if equal to six, Load scene 2
+        if (acornOnHand >= 6)
+        {
+            SceneManager.LoadScene(2);
+        }
+    }
+
 }

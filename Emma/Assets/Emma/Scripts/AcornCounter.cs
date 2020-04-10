@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 public class AcornCounter : MonoBehaviour
 {
     //Set Variables
-    public static int amount;
+    public int amount;
     public Text textComponent;
     public GameObject rootCanvas;
     private static GameObject instance;
@@ -42,14 +42,6 @@ public class AcornCounter : MonoBehaviour
     {
         amount = im.acornOnHand;
         textComponent.text = "Acorns: " + amount;
-
-        // check amount of acorns collected, if equal to six, Load scene 2, then reset the amount to 0
-        // so if you restart the scene, you start over with 0 acorns
-        if (amount == 6)
-        {
-            acornCounterLevelDoneBool = true;
-            LoadByIndex(2);
-        }
     }
 
     // So can load a scene if correct amount of acorns

@@ -17,7 +17,7 @@ public class AcornMinigame : MonoBehaviour
     // When the acorn is clicked, it gets added to the amount and is destroyed
     private void OnMouseUpAsButton()
     {
-        im.acornOnHand += amount;
+        im.AddAcorn(amount);
         Destroy(gameObject);
     }
 }

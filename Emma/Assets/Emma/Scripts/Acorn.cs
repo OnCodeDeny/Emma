@@ -24,7 +24,7 @@ public class Acorn : MonoBehaviour
         //If player is in range, acorn is able to be collected.
         if (playerDetector.isObjectInRange)
         {
-            im.acornOnHand += amount;
+            im.AddAcorn(amount);
             Destroy(gameObject);
         }
     }
