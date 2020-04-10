@@ -16,14 +16,27 @@ public class DialogueManager : MonoBehaviour
 
     private Queue<string> sentences;
 
+    public static DialogueManager instance;
+
+    private void Awake()
+    {
+        if (!instance)
+        {
+            instance = this;
+            DontDestroyOnLoad(this);
+        }
+        else
+        {
+            Destroy(this);
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
         keepTiming = false;
 
         sentences = new Queue<string>();
-
-        DontDestroyOnLoad(this.gameObject);
     }
 
     void Update()
