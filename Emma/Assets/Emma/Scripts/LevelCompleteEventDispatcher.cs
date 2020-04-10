@@ -17,6 +17,6 @@ public class LevelCompleteEventDispatcher : MonoBehaviour
         //Parameter : total_clicks, represents the total number of mouse click action in the game
         //This is a standard unity analytics event with additional parameter
         AnalyticsResult result = AnalyticsEvent.LevelComplete("acorner_level", new Dictionary<string, object> { { "total_clicks", ct.totalClicks } });
-        Debug.Log("Level complete event " + result);
+        //Debug.Log("Level complete event " + result);
     }
 }

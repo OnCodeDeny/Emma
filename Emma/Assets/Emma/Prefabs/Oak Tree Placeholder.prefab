@@ -15,7 +15,7 @@ GameObject:
   m_TagString: OakTree
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &2300946285441481904
 Transform:
@@ -97,7 +97,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &2300946285652592353
 Transform:
@@ -143,4 +143,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   acornPrefab: {fileID: 5840982221073726767, guid: 408064fca0737c04291d85a20839ac49,
     type: 3}
-  acornGenerated: 0

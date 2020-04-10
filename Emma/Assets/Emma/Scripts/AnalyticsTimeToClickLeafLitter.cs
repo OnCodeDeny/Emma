@@ -33,7 +33,7 @@ public class AnalyticsTimeToClickLeafLitter : MonoBehaviour
     public void ReportLeafLitterClicked(int leafLitterClickedID)
     {
         // track the event for analytics, which you can find through "go to dashboard" in Services in Unity
-        print("ClickLeafLitterEvent tracked");
+        //print("ClickLeafLitterEvent tracked");
         Analytics.CustomEvent("LeafLitterEvent_Clicked", new Dictionary<string, object>
         {
             { "leaf_litter_click_id", leafLitterClickedID },

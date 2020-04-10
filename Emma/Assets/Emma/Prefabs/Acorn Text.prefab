@@ -17,7 +17,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!224 &5268694268546433673
 RectTransform:
@@ -92,6 +92,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f1376f937817a24ebffbfba21799b7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  amount: 0
   textComponent: {fileID: 5268694268546433679}
-  player: {fileID: 0}
   rootCanvas: {fileID: 0}
+  im: {fileID: 0}
+  acornCounterLevelDoneBool: 0

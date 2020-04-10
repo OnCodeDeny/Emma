@@ -17,7 +17,7 @@ GameObject:
   m_TagString: Leaf Pile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &7156252681271030286
 Transform:
@@ -94,6 +94,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 998558cf5c737f8428372664cfa0caea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  acornText: {fileID: 0}
+  ClickedLeafLitterBool: 0
 --- !u!60 &7156252681271030285
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -111,7 +113,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 19.2, y: 10.8}
+    oldSize: {x: 13.92, y: 3.36}
     newSize: {x: 19.2, y: 10.8}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
