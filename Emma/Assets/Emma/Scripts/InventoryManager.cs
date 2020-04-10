@@ -27,7 +27,7 @@ public class InventoryManager : Singleton<InventoryManager>
 
             //Parameter : time_elapsed, represents the time spent in the level before the player picks up the first acorn
             AnalyticsResult result = AnalyticsEvent.Custom("first_acorn_found", new Dictionary<string, object> { { "time_elapsed", Time.timeSinceLevelLoad } });
-            Debug.Log("First acorn found event " + result);
+            //Debug.Log("First acorn found event " + result);
         }
 
         else if (acornOnHand >=6 && !lastAcornFound)
@@ -36,7 +36,7 @@ public class InventoryManager : Singleton<InventoryManager>
 
             //Parameter : time_elapsed, represents the time spent in the level before the player picks up the last acorn
             AnalyticsResult result = AnalyticsEvent.Custom("last_acorn_found", new Dictionary<string, object> { { "time_elapsed", Time.timeSinceLevelLoad } });
-            Debug.Log("Last acorn found event " + result);
+            //Debug.Log("Last acorn found event " + result);
         }
     }
 

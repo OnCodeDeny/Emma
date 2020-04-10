@@ -40,7 +40,7 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue)
     {
-        Debug.Log("Starting conversation with " + dialogue.name);
+        //Debug.Log("Starting conversation with " + dialogue.name);
 
         animator.SetBool("IsOpen", true);
 
@@ -83,7 +83,7 @@ public class DialogueManager : MonoBehaviour
 
     void EndDialogue()
     {
-        Debug.Log("End of Conversation");
+        //Debug.Log("End of Conversation");
 
         animator.SetBool("IsOpen", false);
 
